@@ -1,0 +1,132 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #1f3c88;
+    text-align: center;
+}
+
+.login-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        width: 100%;
+    }
+
+    input {
+        padding: 0.75rem;
+        border-radius: 8px;
+        width: 93%;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+        
+        &:focus {
+            border-color: var(--cor-primaria);
+            outline: none;
+        }
+    }
+
+    .primary-btn,
+    .secundary-btn {
+        width: 250px;
+        padding: 0.5rem;
+        background-color: var(--cor-primaria);
+        color: white;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-transform: uppercase;
+        // margin: 0 auto;
+
+        &.secundary-btn {
+            background-color: var(--cor-secundaria);
+            border: 1px solid var(--cor-primaria);
+            color: var(--cor-texto);
+        }
+       
+        &:hover {
+            background-color: var(--cor-primaria-hover);
+            color: white;
+        }
+    }
+    
+    .login-options {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #555;
+        margin-top: -0.5rem;
+    }
+
+    .lembrar-login {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        white-space: nowrap;
+        gap: 0.3rem;
+    }
+
+    .esqueceu-senha {
+        text-decoration: none;
+        color: #1f3c88;
+        transition: color 0.3s;
+        text-decoration: underline;
+
+        &:hover {
+            color: var(--cor-primaria-hover);
+        }
+    }
+
+    .senha-wrapper {
+        position:relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        input {
+            flex: 1;
+            padding-right: 2.5rem;
+        }
+
+        i {
+            position: absolute;
+            right: 12px;
+            cursor: pointer;
+            color: var(--cor-subtexto);
+            font-size: 1rem;
+        }
+    }
+
+    .erro small {
+       color: var(--cor-erro);
+        
+    }
+
+}
