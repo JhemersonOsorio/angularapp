@@ -1,0 +1,31 @@
+
+:root {
+  --cor-primaria: #007bff;
+  --cor-primaria-hover: #0056b3;
+
+  --cor-secundaria: #f0f0f0;
+  --cor-secundaria-hover: #e0e0e0;
+
+  --cor-fundo: #e8e9ea;
+  --cor-container: #ffffff;
+
+  --cor-texto: #212529;
+  --cor-subtexto: #6c757d;
+  --cor-borda: #dee2e6;
+  --cor-link: #007bff;
+  --cor-link-hover: #0056b3;
+
+  --cor-erro: #dc3545;
+  --cor-sucesso: #28a745;
+
+  --fonte-principal: 'Inter', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
