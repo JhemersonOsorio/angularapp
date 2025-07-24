@@ -1,0 +1,42 @@
+<div class="login-container">
+    <form class="login-form">
+        <h2 class="login-title">LOGIN</h2>
+        <label>
+            Login:
+            <input type="text" [formControl]="loginForm" placeholder="Digite seu login"/>
+            <div *ngIf="loginForm.invalid && (loginForm.dirty || loginForm.touched)" class="erro">
+                <small *ngIf="loginForm.errors?.['required']">O login é obrigatório.</small>
+            </div>
+        </label>
+
+        <label>
+            Senha:
+            <div class="senha-wrapper">
+                <input
+                [type]="showPassword ? 'text' : 'password'"
+                [formControl]="passwordForm"
+                placeholder="Digite sua senha"
+                />
+                <i
+                class="fa"
+                [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"
+                (click)="alternarVisibilidadeSenha()"
+                ></i>
+            </div>
+            <div *ngIf="passwordForm.invalid && (passwordForm.dirty || passwordForm.touched)" class="erro">
+                <small *ngIf="passwordForm.errors?.['required']">A senha é obrigatória.</small>
+                <small *ngIf="passwordForm.errors?.['minlength']">tamanho mínimo 4 caracteres</small>
+            </div>
+        </label>
+
+        <div class="login-options">
+            <span class="lembrar-login">
+                <input type="checkbox" [formControl]="rememberForm" /> Lembrar login
+            </span>
+            <a class="esqueceu-senha">Esqueceu a senha?</a>
+        </div>
+        
+        <button type="button" class="primary-btn" (click)="entrar()">Enter</button>
+        <button type="button" class="secundary-btn" (click)="register()">Cadastrar</button>
+    </form>
+</div>
