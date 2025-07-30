@@ -1,4 +1,4 @@
-# AngularTest1
+# Angular App
 
 Projeto criado como prova de conceito para tecnologia angular.
 
